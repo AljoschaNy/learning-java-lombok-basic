@@ -21,4 +21,15 @@ public class UniversityService {
         return totalGrade/numStudents;
     }
 
+    public double getUniversityMedian() {
+        List<Course> allCourses = university.courses();
+        double temp = 0;
+        int numCourses = allCourses.size();
+        for(Course course : allCourses) {
+            temp += getCourseMedian(course);
+        }
+
+        return temp / numCourses;
+    }
+
 }
