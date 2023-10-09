@@ -54,7 +54,6 @@ public class Main {
 
         System.out.println("\nTest setter methods");
         System.out.println(course2);
-        course2.setId("c10");
         System.out.println(course2);
 
     }

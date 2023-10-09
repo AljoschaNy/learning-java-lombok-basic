@@ -5,13 +5,12 @@ import lombok.*;
 import java.util.List;
 
 @AllArgsConstructor
-@NoArgsConstructor
-@Data
+@Value
 @Builder
 public class Course {
-    private String id;
-    private String name;
-    private Teacher teacher;
+    String id;
+    String name;
+    Teacher teacher;
     @With
-    private List<Student> students;
+    List<Student> students;
 }
