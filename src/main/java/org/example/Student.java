@@ -12,5 +12,5 @@ public class Student {
     private String name;
     private String address;
     @With
-    private String grade;
+    private double grade;
 }
