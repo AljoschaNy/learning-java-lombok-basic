@@ -3,6 +3,7 @@ package org.example;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -23,13 +24,23 @@ public class UniversityService {
 
     public double getUniversityMedian() {
         List<Course> allCourses = university.courses();
-        double temp = 0;
+        double sumAllCourseMedian = 0;
         int numCourses = allCourses.size();
         for(Course course : allCourses) {
-            temp += getCourseMedian(course);
+            sumAllCourseMedian += getCourseMedian(course);
         }
-
-        return temp / numCourses;
+        return sumAllCourseMedian / numCourses;
     }
 
+    public List<Student> getAllStudentsWithMin2() {
+        List<Student> students = new ArrayList<>();
+        for(Course course: university.courses()) {
+            for(Student student : course.getStudents()) {
+                if(student.getGrade() <= 2) {
+                    students.add(student);
+                }
+            }
+        }
+        return students;
+    }
 }
