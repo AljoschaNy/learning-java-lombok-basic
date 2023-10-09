@@ -1,9 +1,6 @@
 package org.example;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,5 +11,6 @@ public class Student {
     private String id;
     private String name;
     private String address;
+    @With
     private String grade;
 }
