@@ -34,5 +34,20 @@ public class Main {
                 .students(List.of(student1,student2))
                 .build();
 
+        System.out.println("\nTest toString methods");
+        System.out.println(course2);
+        System.out.println(student1);
+        System.out.println(teacher2);
+
+        System.out.println("\nTest getter methods");
+        System.out.println(course2.getId());
+        System.out.println(student1.getName());
+        System.out.println(teacher2.subject());
+
+        System.out.println("\nTest setter methods");
+        System.out.println(course2);
+        course2.setId("c10");
+        System.out.println(course2);
+
     }
 }
